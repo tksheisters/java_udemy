@@ -20,9 +20,9 @@ public class StartApp {
 		System.out.printf("O %s, custa R$%.2f \n", produto1, preco1);
 		System.out.printf("O %s, custa R$%.2f \n\n", produto2, preco2);
 		
-		System.out.printf("Registro: %d anos, código %d, gênero: %s \n", idade, codigo, genero);
+		System.out.printf("Registro: %d anos, código %d, gênero: %s \n\n", idade, codigo, genero);
 		
-		System.out.printf("Medida(8 casas decimais): %.8f \n", medida);
+		System.out.printf("Medida (8 casas decimais): %.8f \n", medida);
 		System.out.printf("Arredondado (3 casas decimais): %.3f \n", medida);
 		
 		Locale.setDefault(Locale.US);
