@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("resource")
+
 		Scanner sc = new Scanner(System.in);
 		// && = E, || = OU, ! = negação
 
@@ -26,6 +26,7 @@ public class Main {
 			}
 
 		}
+		sc.close();
 
 	}
 }
