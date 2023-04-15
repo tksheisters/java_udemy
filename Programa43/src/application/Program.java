@@ -21,11 +21,23 @@ public class Program {
 		System.out.print("Quantity: ");
 		product.quantity = sc.nextInt();
 
-		double total = product.totalValueStock();
-
-		System.out.printf("Product data: \nName: %s\nPrice: %.2f\nQuantity: %s\nTotal: ", product.name, product.price,
-				product.quantity, total);
-
+		System.out.println();
+		System.out.println(product.toString());
+		
+		System.out.print("\nEnter the number of products to be added in stock: ");
+		int quantity = sc.nextInt();
+		product.addProducts(quantity);
+		
+		System.out.println();
+		System.out.println(product.toString());
+		
+		System.out.print("\nEnter the number of products to be removed from stock: ");
+		quantity = sc.nextInt();
+		product.removeProducts(quantity);
+		
+		System.out.println();
+		System.out.println(product.toString());
+		
 		sc.close();
 	}
 
