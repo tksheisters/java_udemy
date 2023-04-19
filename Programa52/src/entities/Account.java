@@ -3,21 +3,15 @@ package entities;
 public class Account {
 	private int numeroConta;
 	private String nome;
-	private double valorConta;
+	private double saldo;
 
-	public Account() {
-
-	}
-
-	public Account(int numeroConta, String nome, double valorConta) {
-		super();
+	public Account(int numeroConta, String nome, double depositoInicial) {
 		this.numeroConta = numeroConta;
 		this.nome = nome;
-		this.valorConta = valorConta;
+		deposito(depositoInicial);
 	}
 
 	public Account(int numeroConta, String nome) {
-		super();
 		this.numeroConta = numeroConta;
 		this.nome = nome;
 	}
@@ -34,16 +28,20 @@ public class Account {
 		this.nome = nome;
 	}
 
-	public double getValorConta() {
-		return valorConta;
+	public double getSaldo() {
+		return saldo;
 	}
 
-	public double deposito(double deposito) {
-		return this.valorConta += deposito;
+	public void deposito(double deposito) {
+		this.saldo += deposito;
 	}
 
-	public double saque(double saque) {
-		return this.valorConta -= (saque + 5);
+	public void saque(double saque) {
+		this.saldo -= (saque + 5);
+	}
+	
+	public String toString() {
+		return "Conta: " + numeroConta + "\nTitular: " + nome + "\nSaldo: R$" + String.format("%.2f", saldo);
 	}
 
 }

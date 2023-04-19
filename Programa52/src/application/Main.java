@@ -16,9 +16,8 @@ public class Main {
 		System.out.print("Digite o numero da conta: ");
 		conta = sc.nextInt();
 
-		sc.nextLine();
-
 		System.out.print("Digite o nome do titular: ");
+		sc.nextLine();
 		nome = sc.nextLine().toUpperCase();
 
 		System.out.print("Deseja fazer um deposito inicial (s/n)? ");
@@ -28,37 +27,27 @@ public class Main {
 			valor = sc.nextDouble();
 		}
 
-		System.out.println("\n");
-
 		Account account = new Account(conta, nome, valor);
 
+		System.out.println();
 		System.out.println("---------- DADOS DA CONTA: ----------\n");
-		System.out.printf("Conta: " + account.getNumeroConta() + "\nTitular: " + account.getNome() + "\nSaldo: R$%.2f",
-				account.getValorConta());
+		System.out.println(account.toString());
 
-		System.out.println("\n");
+		System.out.println();
 
 		System.out.print("Digite o valor do deposito: ");
 		valor = sc.nextDouble();
 		account.deposito(valor);
+		System.out.println("---------- DADOS ATUALIZADOS: ----------\n");
+		System.out.println(account.toString());
 
 		System.out.println();
-
-		System.out.println("---------- DADOS ATUALIZADOS: ----------\n");
-		System.out.printf("Conta: " + account.getNumeroConta() + "\nTitular: " + account.getNome() + "\nSaldo: R$%.2f",
-				account.getValorConta());
-
-		System.out.println("\n");
 
 		System.out.print("Digite o valor do saque: ");
 		valor = sc.nextDouble();
 		account.saque(valor);
-
-		System.out.println();
-
 		System.out.println("---------- DADOS ATUALIZADOS: ----------\n");
-		System.out.printf("Conta: " + account.getNumeroConta() + "\nTitular: " + account.getNome() + "\nSaldo: R$%.2f",
-				account.getValorConta());
+		System.out.println(account.toString());
 
 		sc.close();
 	}
