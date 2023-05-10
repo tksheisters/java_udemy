@@ -37,12 +37,11 @@ public class OrderItem {
 	}
 
 	public Double subTotal() {
-		double sum = quantity * price;
-		return sum;
+		return quantity * price;
 	}
 
 	public String toString() {
-		return getProduct().getName() + ", $" + String.format("%.2f", price) + " Quantity: " + quantity + " Subtotal: $"
+		return getProduct().getName() + ", $" + String.format("%.2f", price) + " Quantity: " + quantity + ", Subtotal: $"
 				+ String.format("%.2f", subTotal());
 	}
 }
