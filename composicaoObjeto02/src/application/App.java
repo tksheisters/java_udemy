@@ -45,7 +45,7 @@ public class App {
 			Product product = new Product(productName, productPrice);
 			System.out.print("Quantity: ");
 			int quantity = sc.nextInt();
-			OrderItem orderItem = new OrderItem(quantity, product.getPrice(), product);
+			OrderItem orderItem = new OrderItem(quantity, productPrice, product);
 			order.addItem(orderItem);
 		}
 		
