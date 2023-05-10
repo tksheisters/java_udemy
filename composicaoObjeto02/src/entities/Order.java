@@ -9,7 +9,7 @@ import entities.enums.OrderStatus;
 
 public class Order {
 	
-	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
 	private Date moment;
 	private OrderStatus status;
