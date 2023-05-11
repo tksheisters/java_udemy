@@ -28,21 +28,20 @@ public class App {
 			int hours = sc.nextInt();
 			System.out.print("Value per hour: ");
 			double valuePerHour = sc.nextDouble();
-			sc.nextLine();		
+			sc.nextLine();
 			if (outsourced == 'y' || outsourced == 'Y') {
 				System.out.print("Additional charge: ");
 				double additionalCharge = sc.nextDouble();
 				Employee emp = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
 				emps.add(emp);
 			} else {
-				Employee emp = new Employee(name, hours, valuePerHour);
-				emps.add(emp);
+				emps.add(new Employee(name, hours, valuePerHour));
 			}
-			
+
 		}
-		
+
 		System.out.println();
-		
+
 		System.out.println("PAYMENTS:");
 		for (Employee emp : emps) {
 			System.out.println(emp);
