@@ -21,26 +21,27 @@ public class App {
 			Date checkIn = sdf.parse(sc.next());
 			System.out.print("Check-out date (DD/MM/YYYY): ");
 			Date checkOut = sdf.parse(sc.next());
-			
+
 			Reservation reservation = new Reservation(number, checkIn, checkOut);
 			System.out.println(reservation);
-			
+
 			System.out.println();
-			
+
 			System.out.println("Enter data to update the reservation:");
 			System.out.print("Check-in date (DD/MM/YYYY): ");
 			checkIn = sdf.parse(sc.next());
 			System.out.print("Check-out date (DD/MM/YYYY): ");
 			checkOut = sdf.parse(sc.next());
-			
+
 			reservation.updateDates(checkIn, checkOut);
-			System.out.println(reservation);				
+			System.out.println(reservation);
 		} catch (ParseException e) {
 			System.out.println("invalid date format");
 		} catch (DomainException e) {
 			System.out.println(e.getMessage());
+		} catch (RuntimeException e) {
+			System.out.println("Unexpected error: " + e.getMessage());
 		}
-			
 
 		sc.close();
 	}
