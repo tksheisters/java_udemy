@@ -8,34 +8,15 @@ public class App {
 
 	public static void main(String[] args) {
 		String path = "src\\in.txt";
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		try {
-			fr = new FileReader(path);
-			br = new BufferedReader(fr);
-			
+		try (BufferedReader br = new BufferedReader(new FileReader(path))){
 			String line = br.readLine();
-			
 			while(line != null) {
 				System.out.println(line);
 				line = br.readLine();
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
-		} finally {
-			try {
-				if(br != null) {
-					br.close();;
-				}
-				if(fr != null) {
-					fr.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
-
 	}
 
 }
