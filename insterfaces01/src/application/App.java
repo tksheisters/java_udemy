@@ -44,9 +44,9 @@ public class App {
 
 			while (pricePerDay == 0.0 || pricePerHour == 0.0) {
 				try {
-					System.out.print("Entre com o preço por hora: ");
+					System.out.print("Preço por hora: ");
 					pricePerHour = sc.nextDouble();
-					System.out.print("Entre com o preço por dia: ");
+					System.out.print("Preço por dia: ");
 					pricePerDay = sc.nextDouble();
 
 				} catch (InputMismatchException e) {
@@ -57,7 +57,7 @@ public class App {
 			RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 			rentalService.processInvoice(cr);
 
-			System.out.println("FATURA: ");
+			System.out.println("TOTAL DA FATURA: ");
 			System.out.println("Pagamento basico: R$" + String.format("%.2f", cr.getInvoice().getBasicPayment()));
 			System.out.println("Imposto: R$" + String.format("%.2f", cr.getInvoice().getTax()));
 			System.out.println("Pagamento total: R$" + String.format("%.2f", cr.getInvoice().getTotalPayment()));
