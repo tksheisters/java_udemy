@@ -1,0 +1,3 @@
+Computer,2100.90
+iPhone 8,899.90
+iPad,4500.00
