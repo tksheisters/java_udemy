@@ -18,9 +18,12 @@ public class App {
 		Integer x = 10;
 		obj = x;
 
-		Integer[] numbers = { 5, 2, 10 };
-		List<Integer> myInts = new Arrays.asList(numbers);
+		List<Integer> myInts = Arrays.asList(5, 2, 10);
 		printList(myInts);
+
+		List<String> myStrs = Arrays.asList("Maria","Alex","Bob");
+		printList(myStrs);
+
 	}
 
 	public static void printList(List<?> list) {
