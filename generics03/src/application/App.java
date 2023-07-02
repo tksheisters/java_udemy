@@ -27,6 +27,7 @@ public class App {
 	}
 
 	public static void printList(List<?> list) {
+		//list.add(3); da erro
 		for (Object object : list) {
 			System.out.println(object);
 		}
