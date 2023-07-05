@@ -1,0 +1,9 @@
+Alex,15
+Maria,22
+Bob,15
+Alex,30
+Bob,24
+Maria,21
+Maria,34
+Alex,23
+Bob,10
